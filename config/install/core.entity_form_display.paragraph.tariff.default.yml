@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tariff.tariff_color
+    - field.field.paragraph.tariff.tariff_gigabytes
+    - field.field.paragraph.tariff.tariff_header
+    - field.field.paragraph.tariff.tariff_int_subheadline
+    - field.field.paragraph.tariff.tariff_internet_headline
+    - field.field.paragraph.tariff.tariff_period
+    - field.field.paragraph.tariff.tariff_price
+    - field.field.paragraph.tariff.tariff_sms_headline
+    - field.field.paragraph.tariff.tariff_sms_subheadline
+    - field.field.paragraph.tariff.tariff_tariff_id
+    - field.field.paragraph.tariff.tariff_title
+    - paragraphs.paragraphs_type.tariff
+  module:
+    - color_field
+    - text
+id: paragraph.tariff.default
+targetEntityType: paragraph
+bundle: tariff
+mode: default
+content:
+  tariff_color:
+    weight: 9
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  tariff_gigabytes:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  tariff_header:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  tariff_int_subheadline:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  tariff_internet_headline:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  tariff_period:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  tariff_price:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  tariff_sms_headline:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  tariff_sms_subheadline:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  tariff_tariff_id:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  tariff_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

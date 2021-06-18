@@ -1,0 +1,117 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tariff.tariff_color
+    - field.field.paragraph.tariff.tariff_gigabytes
+    - field.field.paragraph.tariff.tariff_header
+    - field.field.paragraph.tariff.tariff_int_subheadline
+    - field.field.paragraph.tariff.tariff_internet_headline
+    - field.field.paragraph.tariff.tariff_period
+    - field.field.paragraph.tariff.tariff_price
+    - field.field.paragraph.tariff.tariff_sms_headline
+    - field.field.paragraph.tariff.tariff_sms_subheadline
+    - field.field.paragraph.tariff.tariff_tariff_id
+    - field.field.paragraph.tariff.tariff_title
+    - paragraphs.paragraphs_type.tariff
+  module:
+    - color_field
+    - text
+id: paragraph.tariff.default
+targetEntityType: paragraph
+bundle: tariff
+mode: default
+content:
+  tariff_color:
+    weight: 9
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  tariff_gigabytes:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  tariff_header:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  tariff_int_subheadline:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  tariff_internet_headline:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  tariff_period:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  tariff_price:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  tariff_sms_headline:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  tariff_sms_subheadline:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  tariff_tariff_id:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  tariff_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

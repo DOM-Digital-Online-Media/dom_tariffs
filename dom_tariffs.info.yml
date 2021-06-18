@@ -1,0 +1,10 @@
+name: "DOM Tariffs"
+type: module
+description: "Provides Tariffs paragraphs for REST."
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: "DOM"
+dependencies:
+  - dom_paragraphs_extra
+  - color_field
+  - rest

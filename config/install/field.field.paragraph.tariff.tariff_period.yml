@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.tariff_period
+    - paragraphs.paragraphs_type.tariff
+id: paragraph.tariff.tariff_period
+field_name: tariff_period
+entity_type: paragraph
+bundle: tariff
+label: Period
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.tariff_sms_subheadline
+    - paragraphs.paragraphs_type.tariff
+  module:
+    - text
+id: paragraph.tariff.tariff_sms_subheadline
+field_name: tariff_sms_subheadline
+entity_type: paragraph
+bundle: tariff
+label: 'SMS sub headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

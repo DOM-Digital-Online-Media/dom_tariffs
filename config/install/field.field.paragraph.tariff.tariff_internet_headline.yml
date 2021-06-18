@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.tariff_internet_headline
+    - paragraphs.paragraphs_type.tariff
+id: paragraph.tariff.tariff_internet_headline
+field_name: tariff_internet_headline
+entity_type: paragraph
+bundle: tariff
+label: 'Internet headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

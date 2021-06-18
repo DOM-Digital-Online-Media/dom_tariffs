@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.tariff_gigabytes
+    - paragraphs.paragraphs_type.tariff
+id: paragraph.tariff.tariff_gigabytes
+field_name: tariff_gigabytes
+entity_type: paragraph
+bundle: tariff
+label: Gigabytes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal
