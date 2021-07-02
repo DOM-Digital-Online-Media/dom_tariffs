@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Main module file for tariffs.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\rest\Plugin\views\display\RestExport;
+
+/**
+ * Implements hook_dom_static_content_data_alter().
+ *
+ * Include tariffs info into static content response data.
+ */
+function dom_tariffs_dom_static_content_data_alter(&$data, CacheableMetadata $cache, $language = NULL) {
+  $language_manager = \Drupal::languageManager();
+  if ($language && ($lang = $language_manager->getLanguage($language))) {
+
+    // Temporarily alter the language manager.
+    $original_language = $language_manager->getConfigOverrideLanguage();
+    $language_manager->setConfigOverrideLanguage($lang);
+  }
+
+  // Get view response and cache data.
+  $response = RestExport::buildResponse('dom_tariffs', 'tariffs_export');
+  $cache->addCacheableDependency($response->getCacheableMetadata());
+
+  // Return original language.
+  if (isset($original_language)) {
+    $language_manager->setConfigOverrideLanguage($original_language);
+  }
+
+  $response_data = Json::decode($response->getContent());
+  $data['tariffs'] = $response_data;
+}
