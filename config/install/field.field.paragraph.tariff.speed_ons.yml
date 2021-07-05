@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.speed_ons
+    - paragraphs.paragraphs_type.tariff
+    - paragraphs.paragraphs_type.tariff_speed_on
+  module:
+    - entity_reference_revisions
+id: paragraph.tariff.speed_ons
+field_name: speed_ons
+entity_type: paragraph
+bundle: tariff
+label: 'Speed ons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tariff_speed_on: tariff_speed_on
+    target_bundles_drag_drop:
+      faq:
+        weight: 5
+        enabled: false
+      tariff:
+        weight: 6
+        enabled: false
+      tariff_option:
+        weight: 7
+        enabled: false
+      tariff_speed_on:
+        enabled: true
+        weight: 8
+field_type: entity_reference_revisions

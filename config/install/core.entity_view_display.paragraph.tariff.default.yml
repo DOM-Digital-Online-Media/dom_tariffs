@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.tariff.options
+    - field.field.paragraph.tariff.speed_ons
     - field.field.paragraph.tariff.tariff_color
     - field.field.paragraph.tariff.tariff_gigabytes
     - field.field.paragraph.tariff.tariff_header
@@ -16,12 +18,31 @@ dependencies:
     - paragraphs.paragraphs_type.tariff
   module:
     - color_field
+    - entity_reference_revisions
     - text
 id: paragraph.tariff.default
 targetEntityType: paragraph
 bundle: tariff
 mode: default
 content:
+  options:
+    type: entity_reference_revisions_entity_view
+    weight: 11
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  speed_ons:
+    type: entity_reference_revisions_entity_view
+    weight: 12
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   tariff_color:
     weight: 9
     label: above

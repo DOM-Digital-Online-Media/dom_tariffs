@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.tariff.options
+    - field.field.paragraph.tariff.speed_ons
     - field.field.paragraph.tariff.tariff_color
     - field.field.paragraph.tariff.tariff_gigabytes
     - field.field.paragraph.tariff.tariff_header
@@ -16,12 +18,37 @@ dependencies:
     - paragraphs.paragraphs_type.tariff
   module:
     - color_field
+    - paragraphs
     - text
 id: paragraph.tariff.default
 targetEntityType: paragraph
 bundle: tariff
 mode: default
 content:
+  options:
+    type: entity_reference_paragraphs
+    weight: 11
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  speed_ons:
+    type: entity_reference_paragraphs
+    weight: 12
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   tariff_color:
     weight: 9
     settings:

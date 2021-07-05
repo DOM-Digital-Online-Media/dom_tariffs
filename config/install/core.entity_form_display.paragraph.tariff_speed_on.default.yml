@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tariff_speed_on.description
+    - field.field.paragraph.tariff_speed_on.period
+    - field.field.paragraph.tariff_speed_on.price
+    - field.field.paragraph.tariff_speed_on.title
+    - paragraphs.paragraphs_type.tariff_speed_on
+  module:
+    - text
+id: paragraph.tariff_speed_on.default
+targetEntityType: paragraph
+bundle: tariff_speed_on
+mode: default
+content:
+  description:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  period:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  price:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
