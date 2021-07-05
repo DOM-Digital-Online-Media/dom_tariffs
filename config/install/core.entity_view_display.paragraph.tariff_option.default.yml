@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tariff_option.activation_info
+    - field.field.paragraph.tariff_option.description
+    - field.field.paragraph.tariff_option.period
+    - field.field.paragraph.tariff_option.price
+    - field.field.paragraph.tariff_option.title
+    - paragraphs.paragraphs_type.tariff_option
+  module:
+    - text
+id: paragraph.tariff_option.default
+targetEntityType: paragraph
+bundle: tariff_option
+mode: default
+content:
+  activation_info:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  period:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  price:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

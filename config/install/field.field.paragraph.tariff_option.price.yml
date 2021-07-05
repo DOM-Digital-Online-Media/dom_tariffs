@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.price
+    - paragraphs.paragraphs_type.tariff_option
+id: paragraph.tariff_option.price
+field_name: price
+entity_type: paragraph
+bundle: tariff_option
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

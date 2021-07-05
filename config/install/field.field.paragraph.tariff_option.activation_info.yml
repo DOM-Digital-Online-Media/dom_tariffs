@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.activation_info
+    - paragraphs.paragraphs_type.tariff_option
+  module:
+    - text
+id: paragraph.tariff_option.activation_info
+field_name: activation_info
+entity_type: paragraph
+bundle: tariff_option
+label: 'Activation Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

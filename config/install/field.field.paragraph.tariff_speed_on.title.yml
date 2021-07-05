@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.title
+    - paragraphs.paragraphs_type.tariff_speed_on
+id: paragraph.tariff_speed_on.title
+field_name: title
+entity_type: paragraph
+bundle: tariff_speed_on
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

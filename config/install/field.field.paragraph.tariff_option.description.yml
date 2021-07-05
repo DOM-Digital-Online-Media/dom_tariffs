@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.description
+    - paragraphs.paragraphs_type.tariff_option
+  module:
+    - text
+id: paragraph.tariff_option.description
+field_name: description
+entity_type: paragraph
+bundle: tariff_option
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

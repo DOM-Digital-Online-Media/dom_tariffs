@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install/update/uninstall functionality for tariffs.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dom_tariffs_install($is_syncing) {
+  $roles = ['user.role.anonymous', 'user.role.authenticated'];
+  $permissions = [
+    'view paragraph content tariff',
+    'view paragraph content tariff_option',
+    'view paragraph content tariff_speed_on',
+  ];
+
+  // Apply default permissions to default roles.
+  if (!$is_syncing) {
+    foreach ($roles as $rolename) {
+      $role = Drupal::configFactory()->getEditable($rolename);
+      $role_raw_data = $role->getRawData();
+      $role_raw_data['permissions'] = array_unique(array_merge($role_raw_data['permissions'], $permissions));
+      $role->setData($role_raw_data)->save();
+    }
+  }
+}
