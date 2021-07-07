@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.tariff_speed_on.description
     - field.field.paragraph.tariff_speed_on.period
     - field.field.paragraph.tariff_speed_on.price
+    - field.field.paragraph.tariff_speed_on.tariff_tariff_id
     - field.field.paragraph.tariff_speed_on.title
     - paragraphs.paragraphs_type.tariff_speed_on
   module:
@@ -38,6 +39,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  tariff_tariff_id:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   title:
     weight: 0
