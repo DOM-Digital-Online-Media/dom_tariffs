@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.tariff_option.description
     - field.field.paragraph.tariff_option.period
     - field.field.paragraph.tariff_option.price
+    - field.field.paragraph.tariff_option.tariff_tariff_id
     - field.field.paragraph.tariff_option.title
     - paragraphs.paragraphs_type.tariff_option
   module:
@@ -47,6 +48,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
+    region: content
+  tariff_tariff_id:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   title:
     weight: 0

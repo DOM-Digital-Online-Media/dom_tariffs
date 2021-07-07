@@ -788,42 +788,6 @@ display:
           field_api_classes: false
           plugin_id: field
         dom_paragraph_rest_options:
-          fields:
-            activation_info: activation_info
-            description: description
-            period: period
-            price: price
-            title: title
-            id: 0
-            uuid: 0
-            revision_id: 0
-            langcode: 0
-            type: 0
-            status: 0
-            created: 0
-            parent_id: 0
-            parent_type: 0
-            parent_field_name: 0
-            behavior_settings: 0
-            default_langcode: 0
-            revision_default: 0
-            revision_translation_affected: 0
-            field_answer: 0
-            field_category: 0
-            field_question: 0
-            options: 0
-            speed_ons: 0
-            tariff_color: 0
-            tariff_gigabytes: 0
-            tariff_header: 0
-            tariff_internet_headline: 0
-            tariff_int_subheadline: 0
-            tariff_period: 0
-            tariff_price: 0
-            tariff_sms_headline: 0
-            tariff_sms_subheadline: 0
-            tariff_tariff_id: 0
-            tariff_title: 0
           id: dom_paragraph_rest_options
           table: paragraph__options
           field: dom_paragraph_rest_options
@@ -884,12 +848,110 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          fields:
+            activation_info: activation_info
+            description: description
+            period: period
+            price: price
+            tariff_tariff_id: tariff_tariff_id
+            title: title
+            id: 0
+            uuid: 0
+            revision_id: 0
+            langcode: 0
+            type: 0
+            status: 0
+            created: 0
+            parent_id: 0
+            parent_type: 0
+            parent_field_name: 0
+            behavior_settings: 0
+            default_langcode: 0
+            revision_default: 0
+            revision_translation_affected: 0
+            field_answer: 0
+            field_category: 0
+            field_question: 0
+            options: 0
+            speed_ons: 0
+            tariff_color: 0
+            tariff_file: 0
+            tariff_gigabytes: 0
+            tariff_header: 0
+            tariff_internet_headline: 0
+            tariff_int_subheadline: 0
+            tariff_period: 0
+            tariff_price: 0
+            tariff_sms_headline: 0
+            tariff_sms_subheadline: 0
+            tariff_title: 0
           plugin_id: dom_paragraphs_rest_field
         dom_paragraph_rest_speed_ons:
+          id: dom_paragraph_rest_speed_ons
+          table: paragraph__speed_ons
+          field: dom_paragraph_rest_speed_ons
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: ''
+          type: entity_reference_revisions_entity_view
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           fields:
             description: description
             period: period
             price: price
+            tariff_tariff_id: tariff_tariff_id
             title: title
             id: 0
             uuid: 0
@@ -912,6 +974,7 @@ display:
             options: 0
             speed_ons: 0
             tariff_color: 0
+            tariff_file: 0
             tariff_gigabytes: 0
             tariff_header: 0
             tariff_internet_headline: 0
@@ -920,13 +983,8 @@ display:
             tariff_price: 0
             tariff_sms_headline: 0
             tariff_sms_subheadline: 0
-            tariff_tariff_id: 0
             tariff_title: 0
-          id: dom_paragraph_rest_speed_ons
-          table: paragraph__speed_ons
-          field: dom_paragraph_rest_speed_ons
           plugin_id: dom_paragraphs_rest_field
-          exclude: false
       filters:
         type:
           id: type

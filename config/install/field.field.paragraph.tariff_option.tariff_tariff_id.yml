@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.tariff_tariff_id
+    - paragraphs.paragraphs_type.tariff_option
+id: paragraph.tariff_option.tariff_tariff_id
+field_name: tariff_tariff_id
+entity_type: paragraph
+bundle: tariff_option
+label: 'Tariff id'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
