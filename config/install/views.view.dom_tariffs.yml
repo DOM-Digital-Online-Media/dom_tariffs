@@ -5,6 +5,7 @@ dependencies:
     - field.storage.paragraph.options
     - field.storage.paragraph.speed_ons
     - field.storage.paragraph.tariff_color
+    - field.storage.paragraph.tariff_file
     - field.storage.paragraph.tariff_gigabytes
     - field.storage.paragraph.tariff_header
     - field.storage.paragraph.tariff_int_subheadline
@@ -20,6 +21,7 @@ dependencies:
     - color_field
     - dom_paragraphs_extra
     - entity_reference_revisions
+    - file
     - paragraphs
     - rest
     - serialization
@@ -724,6 +726,68 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        tariff_file:
+          id: tariff_file
+          table: paragraph__tariff_file
+          field: tariff_file
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ url(''<front>'')|render|split(''/'', -1)|join(''/'') }}{{ tariff_file }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         tariff_tariff_id:
           id: tariff_tariff_id
           table: paragraph__tariff_tariff_id
@@ -851,6 +915,7 @@ display:
           fields:
             activation_info: activation_info
             description: description
+            option_id: option_id
             period: period
             price: price
             tariff_tariff_id: tariff_tariff_id
@@ -873,13 +938,14 @@ display:
             field_category: 0
             field_question: 0
             options: 0
+            speed_on_id: 0
             speed_ons: 0
             tariff_color: 0
             tariff_file: 0
             tariff_gigabytes: 0
             tariff_header: 0
-            tariff_internet_headline: 0
             tariff_int_subheadline: 0
+            tariff_internet_headline: 0
             tariff_period: 0
             tariff_price: 0
             tariff_sms_headline: 0
@@ -951,6 +1017,7 @@ display:
             description: description
             period: period
             price: price
+            speed_on_id: speed_on_id
             tariff_tariff_id: tariff_tariff_id
             title: title
             id: 0
@@ -971,14 +1038,15 @@ display:
             field_answer: 0
             field_category: 0
             field_question: 0
+            option_id: 0
             options: 0
             speed_ons: 0
             tariff_color: 0
             tariff_file: 0
             tariff_gigabytes: 0
             tariff_header: 0
-            tariff_internet_headline: 0
             tariff_int_subheadline: 0
+            tariff_internet_headline: 0
             tariff_period: 0
             tariff_price: 0
             tariff_sms_headline: 0
@@ -1057,6 +1125,7 @@ display:
         - 'config:field.storage.paragraph.options'
         - 'config:field.storage.paragraph.speed_ons'
         - 'config:field.storage.paragraph.tariff_color'
+        - 'config:field.storage.paragraph.tariff_file'
         - 'config:field.storage.paragraph.tariff_gigabytes'
         - 'config:field.storage.paragraph.tariff_header'
         - 'config:field.storage.paragraph.tariff_int_subheadline'
@@ -1138,6 +1207,7 @@ display:
         - 'config:field.storage.paragraph.options'
         - 'config:field.storage.paragraph.speed_ons'
         - 'config:field.storage.paragraph.tariff_color'
+        - 'config:field.storage.paragraph.tariff_file'
         - 'config:field.storage.paragraph.tariff_gigabytes'
         - 'config:field.storage.paragraph.tariff_header'
         - 'config:field.storage.paragraph.tariff_int_subheadline'

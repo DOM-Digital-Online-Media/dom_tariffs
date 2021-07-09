@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.tariff.options
     - field.field.paragraph.tariff.speed_ons
     - field.field.paragraph.tariff.tariff_color
+    - field.field.paragraph.tariff.tariff_file
     - field.field.paragraph.tariff.tariff_gigabytes
     - field.field.paragraph.tariff.tariff_header
     - field.field.paragraph.tariff.tariff_int_subheadline
@@ -18,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.tariff
   module:
     - color_field
+    - file
     - paragraphs
     - text
 id: paragraph.tariff.default
@@ -27,7 +29,7 @@ mode: default
 content:
   options:
     type: entity_reference_paragraphs
-    weight: 11
+    weight: 12
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -39,7 +41,7 @@ content:
     region: content
   speed_ons:
     type: entity_reference_paragraphs
-    weight: 12
+    weight: 13
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -56,6 +58,13 @@ content:
       placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
+    region: content
+  tariff_file:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   tariff_gigabytes:
     weight: 2

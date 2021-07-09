@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.tariff.options
     - field.field.paragraph.tariff.speed_ons
+    - field.field.paragraph.tariff.tariff_file
     - field.field.paragraph.tariff.tariff_color
     - field.field.paragraph.tariff.tariff_gigabytes
     - field.field.paragraph.tariff.tariff_header
@@ -19,6 +20,7 @@ dependencies:
   module:
     - color_field
     - entity_reference_revisions
+    - file
     - text
 id: paragraph.tariff.default
 targetEntityType: paragraph
@@ -42,6 +44,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  tariff_file:
+    weight: 11
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   tariff_color:
     weight: 9

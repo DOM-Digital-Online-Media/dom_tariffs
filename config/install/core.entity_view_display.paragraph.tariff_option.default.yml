@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.tariff_option.activation_info
     - field.field.paragraph.tariff_option.description
+    - field.field.paragraph.tariff_option.option_id
     - field.field.paragraph.tariff_option.period
     - field.field.paragraph.tariff_option.price
     - field.field.paragraph.tariff_option.tariff_tariff_id
@@ -29,6 +30,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  option_id:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   period:
     weight: 3
