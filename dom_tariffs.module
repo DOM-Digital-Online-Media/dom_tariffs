@@ -8,15 +8,16 @@
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\rest\Plugin\views\display\RestExport;
+use Drupal\site_settings\SiteSettingEntityInterface;
 
 /**
  * Implements hook_dom_static_content_data_alter().
  *
  * Include tariffs info into static content response data.
  */
-function dom_tariffs_dom_static_content_data_alter(&$data, CacheableMetadata $cache, $language = NULL) {
+function dom_tariffs_dom_static_content_data_alter(&$data, SiteSettingEntityInterface $static_content, array $options) {
   $language_manager = \Drupal::languageManager();
-  if ($language && ($lang = $language_manager->getLanguage($language))) {
+  if ($options['language'] && ($lang = $language_manager->getLanguage($options['language']))) {
 
     // Temporarily alter the language manager.
     $original_language = $language_manager->getConfigOverrideLanguage();
@@ -25,7 +26,7 @@ function dom_tariffs_dom_static_content_data_alter(&$data, CacheableMetadata $ca
 
   // Get view response and cache data.
   $response = RestExport::buildResponse('dom_tariffs', 'tariffs_export');
-  $cache->addCacheableDependency($response->getCacheableMetadata());
+  $options['cache']->addCacheableDependency($response->getCacheableMetadata());
 
   // Return original language.
   if (isset($original_language)) {
