@@ -5,6 +5,7 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 package: "DOM"
 dependencies:
-  - dom_paragraphs_extra
   - color_field
+  - dom_paragraphs_extra
   - rest
+  - site_settings
